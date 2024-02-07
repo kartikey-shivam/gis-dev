@@ -1,0 +1,313 @@
+/* @config "./tailwind.site.config.cjs"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* .p-1{
+    padding: 1rem;
+} */
+.lang-btn{
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    cursor: pointer;
+    &:hover{
+      border: solid rgba(128, 128, 128, 0.693) 2px;
+      background-color: rgba(128, 128, 128, 0.386);
+    }
+    
+  }
+.icon-6{
+    font-size: 6rem !important;
+}
+.icon-4{
+    font-size: 4rem !important;
+}
+.fade-icon{
+    color: gray !important;
+    /* font-size: 6rem !important; */
+}
+.check-icon{
+    position: absolute;
+    top:-12px;
+    right: -12px;
+    color: rgb(28, 164, 28);
+    font-size: 3.5rem !important;
+    background-color: #fff;
+
+}
+.check-icon-anchor{
+    position: absolute;
+    top:-12px;
+    right: -12px;
+    color: rgb(28, 164, 28);
+    font-size: 3.5rem !important;
+}
+.verify-btn{
+    background-color: rgb(45, 44, 44) !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    text-transform: none !important;
+    margin-left: 1rem !important;
+    /* padding: .5rem 0px !important; */
+}
+.confirm-btn{
+    background-color: rgba(0, 0, 255, 0.637) !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    text-transform: none !important;
+    margin-left: 1rem !important;
+    
+
+}
+.resend-btn{
+    border: none !important;
+    margin-bottom: 1rem !important;
+    border-bottom: solid rgb(45, 44, 44) 1px !important;
+    color: rgb(45, 44, 44) !important;
+}
+.change-number-btn{
+    border: solid rgb(45, 44, 44) 1px !important;
+    color: rgb(45, 44, 44) !important;
+}
+.main{
+    padding: 0 !important;
+}
+.map {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* top: 1.5vh;
+    left: 1.5vw; */
+    outline: 1px solid black;
+}
+.appbar{
+    background-color: rgba(45, 45, 45, .9) !important;
+}
+.layer-control {
+    background-color: #fff;
+    position: absolute;
+    top: 15vh;
+    left: 2vw;
+    border-radius: 5px;
+    /* padding: 1rem; */
+    /* box-shadow: 3px 3px black;
+    border-top: 1px solid black;
+    border-left: 1px solid black; */
+}
+
+.base-layer-label, .wind-layer-label, .image-layer-label {
+    display: flex;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+
+.layer-control input[type=checkbox], .layer-control input[type=radio] {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.layer-control-divider {
+    width: 95%;
+    height: 1px;
+    background-color: black;
+    margin: 5px auto;
+}
+
+.maplibregl-popup {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.maplibregl-popup-content {
+    padding: 5px;
+}
+
+.maplibregl-popup-close-button {
+    margin-top: 3px;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: coral;
+}
+
+.popup-content-div {
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+}
+
+.popup-content-div button {
+    margin-top: 5px;
+    margin-bottom: -5px;
+    font-size: 12px;
+    color: white;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.layer-control-open-btn {
+    font-size: 15px;
+    background: url('/layers.png');
+    background-size: 30px 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    color: white;
+    display: block;
+    border-radius: inherit;
+}
+
+.close-symbol {
+    display: inline-block;
+    transform: rotate(45deg);
+}
+
+.close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: black;
+    background: transparent;
+    border: none;
+    font-size: 17px;
+    width: 15px;
+    height: 15px;
+}
+
+.close-btn:hover {
+    background-color: gray;
+}
+
+.info-modal {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    max-width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    padding: 15px 20px;
+}
+
+.info-modal h3 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 7.5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info-modal p {
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.info-button {
+    display: block;
+    position: absolute;
+    top:12vh;
+    right: 2vw;
+    /* background-color: w3hite; */
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    box-shadow:2px 2px black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.mouse-pointer {
+    cursor: pointer;
+}
+
+.maplibregl-ctrl-geolocate {
+    display: none !important;
+}
+
+.geolocate-button {
+    display: block;
+    position: absolute;
+    top: 23vh;
+    right: 2vw;
+    background: url('./geolocate.png');
+    background-size: 30px 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(219 234 254);
+    box-shadow:2px 2px black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .info-modal {
+        width: 90%;
+    }
+}
+
+.bottom-panel-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0vw;
+    width: 99.5%;
+    height: 20vh;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.bottom-panel-heading {
+    border-bottom: 1px solid black;
+    padding: 3px;
+}
+
+.bottom-panel-heading h5 {
+    text-align: center;
+}
+
+.map-bottom-panel-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-panel-section {
+    margin: 3px;
+    padding: 3px;
+    word-wrap: break-word;
+}
+
+.vertical-divider {
+    height: 95%;
+    width: 1px;
+    background-color: black;
+    margin: auto 5px;
+}
+
+.close-btn-bottompanel {
+    top: 0;
+    right: 0;
+}
